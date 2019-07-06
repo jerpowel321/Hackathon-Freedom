@@ -32,6 +32,38 @@
   }
 }
 
+/* Colors*/
+.green {
+  color: #52B765;
+}
+.bggreen {
+  background-color: #52B765;
+}
+.peach {
+  color: #FFCAB1;
+}
+.bgpeach {
+  background-color: #FFCAB1;
+}
+.orange {
+  color: #E88737;
+}
+.bgorange{
+  background-color: #E88737;
+}
+.greyblue{
+  color: #69A2B0
+}
+.bggreyblue{
+  background-color: #69A2B0;
+}
+.offwhite{
+  color: #F6F8FF
+}
+.offwhite{
+  background-color: #F6F8FF;
+}
+
 .landing {
   background-Image: url("https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80");
   background-size: cover;
@@ -39,3 +71,92 @@
   min-height: 95vh;
   margin: 20px;
 }
+
+.signInCard {
+  background-color: rgba(253, 253, 253, 0.281);
+  min-width: 50%;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 40px;
+}
+p, label, input {
+  color: 	#3E9920
+}
+/* Icon Pulse */
+.hvr-icon-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-icon-pulse .hvr-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-pulse:hover .hvr-icon, .hvr-icon-pulse:focus .hvr-icon, .hvr-icon-pulse:active .hvr-icon {
+  -webkit-animation-name: hvr-icon-pulse;
+  animation-name: hvr-icon-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/* Grow Shadow */
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* ---------------------Jennifer -------------------------*/
+
+
+
+
+
+
+
+
+
+/* ---------------------Jennifer -------------------------*/
+
+
+
+
+/* --------------------- Mel-------------------------*/
+
+
+
+
+
+
+
+
+/* --------------------- Mel-------------------------*/
+
+/* --------------------- Aryan -------------------------*/
+
+
+
+
+
+
+
+
+/* --------------------- Aryan -------------------------*/
