@@ -9,7 +9,7 @@ import Orders from "./pages/chef/orders";
 import Profile from "./pages/chef/profile";
 import SignUp from "./pages/chef/signup"
 import Search from "./pages/customer/search";
-import Landing from "./pages/landing";
+import SignIn from "./pages/landing";
 
 function App() {
   return (
@@ -19,8 +19,8 @@ function App() {
         <Route exact path="/chef/orders" component={Orders} />
         <Route exact path="/chef/profile" component={Profile} />
         <Route exact path="/chef/signup" component={SignUp} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/signin" component={SignIn} />
+        <Route exact path="/" component={Search} />
       </Switch>
     </Router>
   );

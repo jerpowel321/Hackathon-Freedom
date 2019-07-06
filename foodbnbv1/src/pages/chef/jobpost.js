@@ -6,11 +6,13 @@ class jobpost extends Component {
     chefid: 1,
     meal: "",
     mealdescription: "",
+    ingrediants: "",
     portion: "",
     cusine: "",
     zipcode: "",
     status: "available",
     price: "",
+    zipcode: 94401,
   }
   createNewJob = (event) => {
     if (this.state.meal == null) {
@@ -24,9 +26,6 @@ class jobpost extends Component {
     }
     if (this.state.cusine == null) {
       return <div>Please provide a cusine type for your dish.</div>
-    }
-    if (this.state.zipcode == null) {
-      return <div>Please provide your zipcode</div>
     }
     if (this.state.price == null) {
       return <div>Please provide a price for your dish.</div>
@@ -97,9 +96,13 @@ class jobpost extends Component {
               <label for="mealName">Meal</label>
               <input name="meal" type="text" className="form-control" id="mealName" placeholder="Lasagna" onChange={this.handleInputChange} />
             </div>
-            <div className="form-group">
+            <div class="form-group">
               <label for="mealDescription">Meal Description</label>
-              <input name="mealdescription" type="text" className="form-control" id="mealDescription" placeholder="Gordon Ramsay" onChange={this.handleInputChange} />
+              <textarea class="form-control" id="mealDescription" rows="3" placeholder="My family has been cooking this dish for generations. We make the pasta from scratch and use the best quality ingredients. We hope you can enjoy our dish as much as we enjoy making it and sharing it with you all." onChange={this.handleInputChange} ></textarea>
+            </div>
+            <div className="form-group">
+              <label for="ingredients">Ingredients</label>
+              <input name="ingredients" type="text" className="form-control" id="ingredients" placeholder="tomatoes, ground beef, pasta" onChange={this.handleInputChange} />
             </div>
             <div className="form-group">
               <label for="portion">Portion Size</label>
@@ -145,10 +148,6 @@ class jobpost extends Component {
             <div className="form-group">
               <label for="price">Sales Price</label>
               <input name="price" type="text" className="form-control" id="price" placeholder="10" onChange={this.handleInputChange} />
-            </div>
-            <div className="form-group">
-              <label for="chefZipcode">Zip Code</label>
-              <input name="zipcode" type="text" className="form-control" id="chefZipcode" placeholder="94111" onChange={this.handleInputChange} />
             </div>
             <div className="text-center">
               <button type="submit" className="btn bggreen text-white hvr-grow-shadow" onClick={this.createNewJob}> <b className="text-white">Submit</b></button>
