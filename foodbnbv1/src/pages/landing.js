@@ -69,8 +69,8 @@ class Landing extends Component {
                
                 <div>
                   <br></br>
-                  <b><p>Forgot Password</p></b>
-                  <b><p><Link to="/chef/signup">Dont have an account? Sign Up!</Link></p></b>
+                  <b><p><Link to="/forgetpassword">Forget Password</Link></p></b>
+                  <b><p><Link to="/chef/profile">Dont have an account? Sign Up!</Link></p></b>
               </div>
               {/* {error && <p className="text-white darkbackground p-1 mt-3"><b>{error.message}</b></p>} */}
             </form>
