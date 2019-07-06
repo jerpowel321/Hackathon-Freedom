@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Profile = ({props}) => {
+const Profile = ({props}) =>
     <div>
         <div id='basic-info'>
             <h1>{props.name}</h1>
@@ -21,7 +21,6 @@ const Profile = ({props}) => {
             </ul>
         </div>
     </div>
-}
     
 
 export default Profile
