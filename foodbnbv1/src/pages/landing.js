@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Link, NavLink } from 'react-router-dom';
 
 
-const INITIAL_STATE = {
-  email: '',
-  password: '',
-  isAdmin: '',
-  error: null,
-};
+// const INITIAL_STATE = {
+//   email: '',
+//   password: '',
+//   isAdmin: '',
+//   error: null,
+// };
 
 // onChange = event => {
 //   this.setState({ [event.target.name]: event.target.value });
@@ -87,5 +87,3 @@ class Landing extends Component {
 
 export default Landing;
 
-{/* <Link to="/chef/profile">I am a chef!</Link> 
-<Link to="/search">I am looking for home cooked meals!</Link> */}

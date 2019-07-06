@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import API from "../../utils/API"
+import API from "../../utils/API";
+import HandleImageUploads from "../../components/DropZone";
 
 class jobpost extends Component {
   state = {
@@ -13,6 +14,7 @@ class jobpost extends Component {
     status: "available",
     price: "",
     zipcode: 94401,
+    image: ""
   }
   createNewJob = (event) => {
     if (this.state.meal == null) {
@@ -43,6 +45,7 @@ class jobpost extends Component {
         zipcode: this.state.zipcode,
         status: this.state.status,
         price: this.state.price,
+        image: this.state.image
       }
       console.log(newJob)
       API.saveJob(newJob)
@@ -91,7 +94,9 @@ class jobpost extends Component {
         </nav>
         <div className="container w-50">
           <form className="pt-5 pb-5">
+            <div className="text-center">
             <h1 className="text-center green">Post a Meal</h1>
+            </div>
             <div className="form-group">
               <label for="mealName">Meal</label>
               <input name="meal" type="text" className="form-control" id="mealName" placeholder="Lasagna" onChange={this.handleInputChange} />
@@ -111,7 +116,7 @@ class jobpost extends Component {
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
-                <option>5</option>
+                <option>5</option>  
                 <option>6</option>
                 <option>7</option>
                 <option>8</option>
@@ -149,6 +154,11 @@ class jobpost extends Component {
               <label for="price">Sales Price</label>
               <input name="price" type="text" className="form-control" id="price" placeholder="10" onChange={this.handleInputChange} />
             </div>
+            <HandleImageUploads  
+						url='https://api.cloudinary.com/v1_1/dbpqzyaat/image/upload'
+						preset='i5aglck3'
+						// setUserImages={setUserImages}
+					/>
             <div className="text-center">
               <button type="submit" className="btn bggreen text-white hvr-grow-shadow" onClick={this.createNewJob}> <b className="text-white">Submit</b></button>
             </div>
