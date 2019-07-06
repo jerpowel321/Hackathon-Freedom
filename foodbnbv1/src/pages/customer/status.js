@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import API from "../../utils/API";
+import Nav from "../../components/Nav"
 
 
 
@@ -14,7 +15,24 @@ class Status extends Component {
     render() {
         return (
 
-            <div className="receipt-form">
+<div>
+               <Nav>
+                   
+               </Nav>
+               </div>
+
+            <div className="receipt">
+
+                <div className="col-sm-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <h5 class="card-title">Delivery Address</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+
                 <form>
 
                     <div className="form-row">
@@ -23,16 +41,16 @@ class Status extends Component {
                         </div>
 
 
-                    
+
 
                     </div>
-                    </form>
+                </form>
             </div>
         )
     }
 }
 
-    export default Status;
+export default Status;
 
 
 //Checkout
