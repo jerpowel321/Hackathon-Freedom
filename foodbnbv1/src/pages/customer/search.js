@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import Jumbotron from "../../components/Jumbotron"
+import Jumbotron from "../../components/Jumbotron"
 // import { Col, Row, Container } from "../../components/Grid";
 
 class Search extends Component {
@@ -33,9 +33,9 @@ class Search extends Component {
         let keyCount = -1;
         return (
             <div>
-                {/* <Jumbotron> */}
+                <Jumbotron>
                     <b><h1 className="text-center text-white"><i className="fas fa-search"></i>   Search for home cooked food </h1></b>
-                {/* </Jumbotron> */}
+                </Jumbotron>
 
                 <div className="search container pt-2 my-1">
                     <div className="form-group mb-4">

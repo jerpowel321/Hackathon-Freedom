@@ -39,3 +39,10 @@
   min-height: 95vh;
   margin: 20px;
 }
+
+.jumbotron {
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  
+}
