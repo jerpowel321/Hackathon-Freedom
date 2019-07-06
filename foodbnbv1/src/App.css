@@ -165,7 +165,15 @@ h1 {
 
 /* --------------------- Aryan -------------------------*/
 
+.signuppage {
+  width: 50%;
+  margin: auto;
+}
 
+.imageinput {
+  display: block;
+  margin: auto;
+}
 
 
 
