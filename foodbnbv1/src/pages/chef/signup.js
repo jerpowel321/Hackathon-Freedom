@@ -3,25 +3,62 @@ import React from 'react'
 
 
 const CreateProfile = () => 
-    <div>
-        <h1>Your Profile</h1>
-        <form>
-            First Name: <input type='text'></input> <br/>
-            Last Name: <input type='text'></input> <br/>
-            Email: <input type='text' id='email-field'></input> <br/>
-            Password: <input type='password'></input> <br/>
-            Confirm Password: <input type='password'></input> <br/>
-            Profile Picture: <input type='image' alt='Profile Picture'></input> <br/>
-            Short Bio: <br/> <input type='text' id='bio-field'></input> <br/>
-            Zip Code: <input type='text'></input> <br/>
-            Choose a Cuisine: <br/>
-            <input type="radio" name="cuisine1" value="American"></input> American<br/>
-            <input type="radio" name="cuisine2" value="Indian"></input> Indian<br/>
-            <input type="radio" name="cuisine3" value="Asian"></input> Asian<br/>
-            <input type="radio" name="cuisine4" value="Mediterranean"></input> Mediterranean<br/>
-            Specialties (Comma separated): <input type='text'></input><br/>
+    <div className='signuppage text-center'>
+        <form className="pt-5 pb-5">
+            <h1>Your Profile</h1>
+            <div className="form-group row">
+                <div className='col-sm-6'>
+                    <label for="Profile" className>First Name</label>
+                    <input type="text" class="form-control" placeholder="First Name"/>
+                </div>
+                <div className="col-sm-6">
+                    <label for="Profile">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name"/>
+                </div>
+            </div>
+            <div className="form-group row">
+                <div className="col-sm-6">
+                    <label for="Profile">Email address</label>
+                    <input type="email" class="form-control" placeholder="name@example.com"/>
+                </div>
+                <div className="col-sm-6">
+                    <label for="Profile">Password</label>
+                    <input type="password" class="form-control" placeholder="Password"/>
+                </div>
+            </div>
+            <div className="form-group justify-content-center">
+                <label for="Profile" >Profile Picture</label>
+                <div className="row text-center">
+                    <input type="file" className="form-control-file col-sm-6"/>
+                </div>
+            </div>
+            <div className="form-group">
+                <label for="Profile">Short Bio</label>
+                <textarea class="form-control" placeholder="I am an amateur chef who..." rows="3"></textarea>
+            </div>
+            <div className="form-group row">
+                <div className="form-group col-sm-6">
+                    <label for="Profile">Main Cuisine</label>
+                    <select class="form-control">
+                        <option>American</option>
+                        <option>Indian</option>
+                        <option>Asian</option>
+                        <option>Mediterranean</option>
+                        <option>Middle East</option>
+                    </select>
+                </div>
+                <div className="form-group col-sm-6">
+                    <label for="Profile">Zip Code</label>
+                    <input type="text" class="form-control" placeholder="Last Name"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="Profile">Specialties(comma separated)</label>
+                <textarea class="form-control" placeholder="Vegetarian, Spicy..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Create your profile</button>
         </form>
-        <button type='button' href='../jobpost.js'>Save Your Profile</button>
     </div> 
 
 export default CreateProfile
