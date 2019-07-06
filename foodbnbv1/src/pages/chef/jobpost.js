@@ -4,7 +4,18 @@ import React, { Component } from "react";
 
 
 class jobpost extends Component {
+  state = {
+	
+	}
 
+
+  handleInputChange = (event) => {
+		let { name, value } = event.target;
+
+		this.setState({
+			[name]: value
+		});
+	}
   render() {
 
     return (
@@ -35,33 +46,66 @@ class jobpost extends Component {
 </nav>
        <div className="container">
         <form>
-          <div className="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+        <div className="form-group">
+            <label for="chefName">Your Name</label>
+            <input type="text" className="form-control" id="chefName" placeholder="Gordon Ramsay" onChange={this.handleInputChange} />
           </div>
           <div className="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select className="form-control" id="exampleFormControlSelect1">
+            <label for="chefEmail">Email address</label>
+            <input type="email" className="form-control" id="chefEmail" placeholder="gordonRamsay@gmail.com" onChange={this.handleInputChange} />
+          </div>
+          <div className="form-group">
+            <label for="mealName">Meal</label>
+            <input type="text" className="form-control" id="mealName" placeholder="Gordon Ramsay" onChange={this.handleInputChange} />
+          </div>
+          <div className="form-group">
+            <label for="mealDescription">Meal Description</label>
+            <input type="text" className="form-control" id="mealDescription" placeholder="Gordon Ramsay" onChange={this.handleInputChange} />
+          </div>
+          <div className="form-group">
+            <label for="portion">Portion Size</label>
+            <select className="form-control" id="portion" onChange={this.handleInputChange} >
               <option>1</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
               <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
             </select>
           </div>
           <div className="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple className="form-control" id="exampleFormControlSelect2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+            <label for="Cusine">Type of Cusine</label>
+            <select multiple className="form-control" id="Cusine" onChange={this.handleInputChange} >
+            <option value="American">American</option>
+									<option value="Cajun">Cajun</option>
+									<option value="Chinese">Chinese</option>
+									<option value="Thai">Dessert</option>
+									<option value="French<">French</option>
+									<option value="Filipino">Filipino</option>
+									<option value="Greek">Greek</option>
+									<option value="Indian">Indian</option>
+									<option value="Indonesian">Indonesian</option>
+									<option value="Italian">Italian</option>
+									<option value="Japanese">Japanese</option>
+									<option value="Korean">Korean</option>
+									<option value="Mediterranean">Mediterranean</option>
+									<option value="Mexican">Mexican</option>
+									<option value="Polish">Polish</option>
+									<option value="Peruvian<">Peruvian</option>
+									<option value="Russian">Russian</option>
+									<option value="Taiwanese">Taiwanese</option>
+									<option value="Thai">Thai</option>
+									<option value="Thai">Vietnamese</option>
+									<option value="Other">Other</option>
             </select>
           </div>
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="chefZipcode">Zip Code</label>
+            <input type="text" className="form-control" id="chefZipcode" placeholder="94111" onChange={this.handleInputChange} />
           </div>
         </form>
         </div>
