@@ -1,6 +1,7 @@
 import React from 'react'
 import API from "../../utils/API";
 
+
 const MenuItem = ({props}) =>
     <div className="card text-white bg-primary mb-3 w-50">
         <div className="card-header">{props.cuisine} cuisine made by {props.chef}</div>
@@ -16,11 +17,11 @@ class Dashboard extends React.Component{
         super(props)
         this.toggleStatus = this.toggleStatus.bind(this)
     }
+
     
 
     state = {
-        'items':[
-        ]
+        'items':[]
     }
 
     toggleStatus(i){
@@ -33,6 +34,7 @@ class Dashboard extends React.Component{
             'items': newItems
         })
     }
+
 
     componentWillMount() {
         API.getChefById(1).then(done => {
@@ -66,12 +68,12 @@ class Dashboard extends React.Component{
         let publicItems = []
         console.log(publicItems)
 
+
         if (this.state.items == undefined) {
             return (
                 <div>Fetching data</div>
             )
         }
-
         this.state.items.map((meal) => (
             meal.public 
             ? publicItems.push(meal)
