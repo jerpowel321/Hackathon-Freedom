@@ -10,7 +10,6 @@ class Status extends Component {
         {
             window.persist = {}
             window.persist.order = {}
-            window.persist.order["order"]
         }
     }
 
