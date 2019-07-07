@@ -98,7 +98,7 @@ class Search extends Component {
           <div className="pb-2 mb-2" id="cooks" className="container px-5">
             {this.state.results.map(cook => {
               keyCount++;
-              return (<div className="col-sm-6 "value={cook} key={keyCount}>
+              return (<div className="col-sm-6 mx-auto"value={cook} key={keyCount}>
                 {/* <hr></hr> */}
                 <div className="card">
                 <h2 className="text-center text-info mt-2">{cook.name}</h2>
