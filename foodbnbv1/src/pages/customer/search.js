@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron"
 import Nav from "../../components/Nav"
 // import { Col, Row, Container } from "../../components/Grid";
+import Footer from "../../components/Footer"
 
 class Search extends Component {
   state = {
@@ -46,6 +47,7 @@ class Search extends Component {
       console.log(meal);
       this.setState({ selectedMeal: meal })
       console.log(this.state.selectedMeal)
+      console.log(this.state)
     } 
 
     let keyCount = -1;
@@ -100,7 +102,7 @@ class Search extends Component {
           </div>
 
           <div className="mt-5" id="availableMeals" className=" pt-5 pb-5">
-            <h1>Available Meals</h1>
+            <h1>Available Meals Near San Mateo</h1>
             <div className="row">
               {this.state.availableMeals.map(meal => {
                 
@@ -119,6 +121,7 @@ class Search extends Component {
           </div>
 
         </div>
+            <Footer/>
       </div>
 
     )
