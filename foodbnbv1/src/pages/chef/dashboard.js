@@ -1,13 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import API from "../../utils/API";
-
+import Nav from "../../components/Nav"
+import Footer from "../../components/Footer"
 
 const MenuItem = ({props}) =>
-    <div className="card text-white bg-primary mb-3 w-50">
-        <div className="card-header">{props.cuisine} cuisine made by {props.chef}</div>
+    <div>
+        <div className="card-header">{props.name}</div>
         <div className="card-body">
-            <h5 className="card-title">{props.name}</h5>
-            <h6 className="card-text">{props.description}</h6>
+            <h5 className="card-title">{props.description}</h5>
+            <h6 className="card-text">{props.chef}</h6>
         </div>
     </div>
 
@@ -21,7 +23,8 @@ class Dashboard extends React.Component{
     
 
     state = {
-        'items':[]
+        'items':[],
+        'currIndex': 0
     }
 
     toggleStatus(i){
@@ -31,7 +34,8 @@ class Dashboard extends React.Component{
         console.log(newItems[i])
         newItems[i]['public'] = !newItems[i]['public']
         this.setState({
-            'items': newItems
+            'items': newItems,
+            'currIndex': i
         })
     }
 
@@ -52,7 +56,7 @@ class Dashboard extends React.Component{
                             "name": order.name,
                             "cuisine": order.tags,
                             "description": order.description,
-                            "public": order.status != "private"
+                            "public": false
                     }});
 
                     this.setState({ "items": result });
@@ -67,7 +71,7 @@ class Dashboard extends React.Component{
     render() {
         let privateItems = []
         let publicItems = []
-        console.log(publicItems)
+        console.log(this.state.items)
 
 
         if (this.state.items == undefined) {
@@ -75,32 +79,104 @@ class Dashboard extends React.Component{
                 <div>Fetching data</div>
             )
         }
-        this.state.items.map((meal) => (
-            meal.public 
-            ? publicItems.push(meal)
-            : privateItems.push(meal) 
-        ))
-
+         this.state.items.map((meal) => (
+             meal.public 
+             ? publicItems.push(meal)
+             : privateItems.push(meal) 
+         ))
 
         return (
-            <div className='row'>
-                <div id='privateItems' className='col'>
-                    <h3>Saved Meals</h3>
-                    {privateItems.map((meal, i) =>(
-                            <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
-                                <MenuItem props={meal} />
-                            </div>
-                    ))}
-                </div>
-                <div id='publicMenu' className='col'>
-                    <h3>Public Meal</h3>
-                    {publicItems.map((meal, i) =>(
-                        <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
-                            <MenuItem props={meal} />
+            <div>
+                <Nav/>
+                <div className='text-center'>
+                    <h1 className='text-success mb-5'>Chef Dashboard</h1>
+                    <div className='row mt-5'>
+                        <div className='col-1'></div>
+                        <div id='privateItems' className='col-4 border text-center'>
+                            <h3 className='mt-2 mb-2 text-warning'>Saved Meals</h3>
+                            <Link to='./jobpost'>Add a Meal</Link>
+                            {privateItems.map((meal, i) =>(
+                                    <div className="card text-white bg-success mb-3 w-100" key={i}>
+                                        <MenuItem props={meal} />
+                                        <button type="button" class="btn btn-primary" onClick={(e) => this.toggleStatus(meal['index'])}>Add this Meal</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit Meal</button>
+                                    </div>
+                            ))}
                         </div>
-                    ))}
+                        <div className="col-1"></div> 
+                        <div id='publicMenu' className='col-5 border text-center'>
+                            <h3 className='mt-2 text-warning'>Public Menu</h3>
+                            {publicItems.map((meal, i) =>(
+                                <div className="card text-white bg-success mb-3 w-100" key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
+                                    <MenuItem props={meal} />
+                                </div>
+                            ))}
 
+                        </div>    
+                    </div>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Meal</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div className='signuppage text-center sticky-top'>
+                                    <form>
+                                        <h1 className='text-success'>Meal Profile</h1>
+                                        <div className="form-group row">
+                                            <div className='col-sm-3'></div>
+                                            <div className='col-sm-6'>
+                                                <label for="Profile" className>Meal Name</label>
+                                                <input type="text" class="form-control" value='Fried Calimari'/>
+                                            </div>
+                                            <div className='col-sm-3'></div>
+                                        </div>
+                                        <div className="form-group justify-content-center">
+                                            <label for="Profile" >Meal Picture</label>
+                                            <div className="row text-center">
+                                                <input type="file" className="form-control-file col-sm-6"/>
+                                            </div>
+                                        </div>
+                                        <div className="form-group">
+                                            <label for="Profile">Short Meal Description</label>
+                                            <textarea class="form-control" value="This is a savory sea food dish..." rows="3"></textarea>
+                                        </div>
+                                        <div className="form-group row">
+                                            <div className="form-group col-sm-6">
+                                                <label for="Profile">Main Cuisine</label>
+                                                <select class="form-control">
+                                                    <option>American</option>
+                                                    <option>Indian</option>
+                                                    <option selected>Asian</option>
+                                                    <option>Mediterranean</option>
+                                                    <option>Middle East</option>
+                                                </select>
+                                            </div>
+                                            <div className="form-group col-sm-6">
+                                                <label for="Profile">Zip Code</label>
+                                                <input type="text" class="form-control" value="94539"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="Profile">Ingredients(comma separated)</label>
+                                            <textarea class="form-control" value="Calimari, bread, egg, oil..." rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Finalize</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
