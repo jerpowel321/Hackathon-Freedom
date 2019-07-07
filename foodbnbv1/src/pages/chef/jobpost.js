@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import HandleImageUploads from "../../components/DropZone";
-import { Link, NavLink } from 'react-router-dom';
+// import { Link, NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router'
 
 class jobpost extends Component {
@@ -12,7 +12,7 @@ class jobpost extends Component {
     ingredients: "",
     portions: -1,
     tags: "",
-    status: "Available",
+    status: "private",
     price: "",
     image: window.imageURL,
     chef: null,
