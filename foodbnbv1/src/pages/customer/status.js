@@ -4,6 +4,16 @@ import Nav from "../../components/Nav"
 import { Link, NavLink } from 'react-router-dom';
 import Footer from "../../components/Footer"
 class Status extends Component {
+    constructor(props) {
+        super(props);
+        if (window.persist == null)
+        {
+            window.persist = {}
+            window.persist.order = {}
+            window.persist.order["order"]
+        }
+    }
+
     state = {
         // results: [],
         // search: "",
@@ -79,26 +89,26 @@ class Status extends Component {
                                             <h6 className="font-weight-bold">Item(s):</h6>
                                         </div>
                                         <div className="row">
-                                            <div className="col-10">
-                                                <h7>- Name1</h7>
+                                            <div className="col-9">
+                                                <h7>{window.persist.order["order"].name}</h7>
                                             </div>
-                                            <div className="col-2">
-                                                <p className="">$ ??.??</p>
+                                            <div className="col-3">
+                                                <p className="float-right">$ {window.persist.order["order"].price_per_meal} x {window.persist.order["order"].portions_bought}</p>
                                             </div>
                                         </div>
 
                                         <div className="row">
-                                            <div className="col-10">
+                                            <div className="col-9">
                                                 <h7>Delivery Fees:</h7>
                                             </div>
-                                            <div className="col-2">
+                                            <div className="col-3">
                                                 <p className="float-right">$ 5.00</p>
                                             </div>
                                         </div>
 
                                         <div>
                                             <b><h7>Total:</h7></b>
-                                            <p className="float-right">$ Total</p>
+                                            <p className="float-right">$ {window.persist.order["order"].total_price + 5}</p>
                                         </div>
                                     </div>
                                 </div>
