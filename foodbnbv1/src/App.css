@@ -23,6 +23,10 @@
   color: #61dafb;
 }
 
+#burp{
+  color: #5cb85c;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -194,6 +198,38 @@ font-family: 'B612', sans-serif;
   max-width: 18rem;
   margin: auto;
 }
+
+
+.foodDescription H2 {
+text-decoration: underline;
+}
+#soup {
+  width: 50%;
+}
+.black {
+  color: #000000;
+}
+#salt {
+  width: 50%;
+}
+.previmg {
+  height: 250px;
+}
+.foodDescription row {
+  margin: 0px;
+}
+.lastImg {
+  width: 99%;
+}
+
+#profImg{
+  height: 200px;
+}
+
+.propage #navbar a {
+  color: #f7f7f7;
+}
+
 /* ---------------------Jennifer -------------------------*/
 
 
