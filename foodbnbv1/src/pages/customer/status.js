@@ -33,30 +33,49 @@ class Status extends Component {
 
                     <div className="receipt">
 
-                        <div className="col-sm-5">
-                            <div className="card">
-                                <div className="card-body">
-                                    <div className="float-right">
-                                        <button type="button" className="btn btn-link flex-end">Edit</button>
-                                    </div>
-                                    <h5 class="card-title">Delivery Address</h5>
-                                    <p class="card-text">1 Unicorn Street <br></br>
-                                        San Francisco, CA, 94129 <br></br>
-                                        USA
+                        <div className="row">
+
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <div className="inline-block">
+                                            <button type="button" className="btn btn-link flex-end">Edit</button>
+                                        </div>
+                                        <h5 class="card-title">Delivery Address</h5>
+                                        <p class="card-text">1 Unicorn Street <br></br>
+                                            San Francisco, CA, 94129 <br></br>
+                                            USA
                                     </p>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <div className="inline-block">
+                                            <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo" />
+                                        </div>
+
+                                        <p>Order Summary</p>
+                                        <p>Items (1):</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <br></br>
+                        {/* <br></br> */}
 
-                        <div className="col-sm-5">
+                        <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
                                     <h5 class="card-title">Select Delivery Time</h5>
 
 
-                                    <p>We'll drop it off at your door, eat it fresh, be there to pick it</p>
+                                    <p>We'll drop it off at your door, eat it fresh, be there to pick it up!</p>
 
 
 
@@ -72,7 +91,7 @@ class Status extends Component {
                                             </label>
                                             </div>
 
-                                            
+
 
 
                                             <div className="form-check">
@@ -82,7 +101,7 @@ class Status extends Component {
                                             </label>
                                             </div>
 
-                                            
+
 
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
@@ -91,7 +110,7 @@ class Status extends Component {
                                             </label>
                                             </div>
 
-                                           
+
 
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
@@ -107,7 +126,6 @@ class Status extends Component {
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
                 </div>
