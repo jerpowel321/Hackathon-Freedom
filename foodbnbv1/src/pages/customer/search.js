@@ -29,15 +29,24 @@ class Search extends Component {
     this.setState({ search: event.target.value });
   };
 
-  handleFormSubmit = event => {
+  handleSearchSubmit = event => {
     event.preventDefault();
-    API.searchcooks(this.state.search)
+    const searchArea = this.state.search|0;
+    API.searchcooks()
       .then(res => {
         console.log(res.data)
+        const chefs = res.data.filter(x => 
+          // filter those within 5000 zipcodes.
+          Math.abs(x.zipcode - searchArea) < 5000
+        ).sort((x, y) => 
+          // Then sort by the closest chef.
+          Math.abs(x.zipcode - searchArea) - Math.abs(y.zipcode - searchArea)
+        );
+        
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        this.setState({ results: res.data });
+        this.setState({ results: chefs });
       })
       .catch(err => this.setState({ error: err.message }));
   };
@@ -70,7 +79,7 @@ class Search extends Component {
           </div>
           <div className="search container pt-2 my-1">
             <div className="form-group mb-4">
-              <b><label className="text-info" htmlFor="cook">What are you craving?</label></b>
+              <b><label className="text-info" htmlFor="cook">Where are you located?</label></b>
               <input
                 value={this.state.search}
                 onChange={this.handleInputChange}
@@ -78,10 +87,10 @@ class Search extends Component {
                 list="cooks"
                 type="text"
                 className="form-control"
-                placeholder="Banh Mi"
+                placeholder="ZIP code"
                 id="cook"
               />
-              <button onClick={this.handleFormSubmit} className="btn btn-info mt-3 mb-2">
+              <button onClick={this.handleSearchSubmit} className="btn btn-info mt-3 mb-2">
                 Search
                        </button>
             </div>
