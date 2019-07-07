@@ -87,6 +87,7 @@ class Dashboard extends React.Component{
 
         return (
             <div>
+
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo"/>
                             <b><a className="navbar-brand"><span className="green">Food</span><span className="orange">Drop</span></a></b>
@@ -114,6 +115,7 @@ class Dashboard extends React.Component{
                         </ul>
                     </div>
                 </nav>
+
                 <div className='text-center'>
                     <h1 className='text-success mb-5'>Chef Dashboard</h1>
                     <div className='row mt-5'>

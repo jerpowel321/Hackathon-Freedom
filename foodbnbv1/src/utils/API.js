@@ -93,7 +93,7 @@ export default {
      * @param number amount
      */
     buyOrderGetData(customerId, orderId, amount=1) {
-      return axios.post(BASEURL + "/buy/", {
+      return axios.post(BASEURL + "/buy/extra", {
         "customer_id": customerId,
         "order_id": orderId,
         "amount": amount

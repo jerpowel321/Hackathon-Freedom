@@ -7,10 +7,29 @@ import { Accordion, Card, Button } from 'react-bootstrap';
 import Stars from "../../components/Stars";
 import { Link, NavLink } from 'react-router-dom';
 import Footer from "../../components/Footer"
+import { renderComponent } from "recompose";
 
 class jobpost extends Component {
   state = {
     reviews: [],
+    redirect: false
+  }
+
+  constructor(props) {
+    super(props);
+    this.submitOrder = this.submitOrder.bind(this);
+  }
+
+  submitOrder() {
+    const amount = document.getElementById("exampleFormControlSelect1").value;
+    API.buyOrderGetData(2, 14, amount).then(x => {
+      console.log(x.data);
+      if (window.persist == null) {
+        window.persist = {}
+      }
+      window.persist["order"] = x.data;
+      this.props.history.push("/customer/status");
+    });
   }
 
   viewReviews(id) {
@@ -23,7 +42,17 @@ class jobpost extends Component {
   }
 
   render() {
+    console.log(this.state);
+    console.log("here")
+    console.log("here")
+    console.log("here")
 
+    if (this.state.redirect) {
+      console.log("there")
+      console.log("there")
+      console.log("there")
+      return <Redirect to="/customer/status" />;
+    }
 
     return (
       <div className="chineseFoodPage">
@@ -89,26 +118,28 @@ class jobpost extends Component {
                 <img className="lastImg" src=" https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2018/01/tagine-main.jpg" alt="Food Image" />
               </div>
 
-              <form>
-                <div class="form-group">
-                  <h3 className="pt-3">Quantity to Order</h3>
-                  <select class="form-control col-sm-6 mx-auto text-center" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                  </select>
-                </div>
-                <div className="text-center pt-2">
-                  <button className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark"><NavLink className="" to="/customer/status"><b className="text-white">Order Now</b></NavLink></button>
-                </div>
-              </form>
+              <div class="form-group">
+                <h3 className="pt-3">Quantity to Order</h3>
+                <select class="form-control col-sm-6 mx-auto text-center" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+              </div>
+              <div className="text-center pt-2">
+                <a className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark" onClick={this.submitOrder}>
+                  {/* <NavLink className="" to="/customer/status"> */}
+                    <b className="text-white">Order Now</b>
+                  {/* </NavLink> */}
+                </a>
+              </div>
 
 {/* 
               <div className="text-center pt-2">
