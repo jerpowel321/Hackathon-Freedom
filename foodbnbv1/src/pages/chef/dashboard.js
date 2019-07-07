@@ -1,6 +1,7 @@
 import React from 'react'
 import API from "../../utils/API";
 
+
 const MenuItem = ({props}) =>
     <div className="card text-white bg-primary mb-3 w-50">
         <div className="card-header">{props.cuisine} cuisine made by {props.chef}</div>
@@ -16,11 +17,11 @@ class Dashboard extends React.Component{
         super(props)
         this.toggleStatus = this.toggleStatus.bind(this)
     }
+
     
 
     state = {
-        'items':[
-        ]
+        'items':[]
     }
 
     toggleStatus(i){
@@ -34,6 +35,7 @@ class Dashboard extends React.Component{
         })
     }
 
+
     componentWillMount() {
         API.getChefById(1).then(done => {
             const chef = JSON.parse(done.request.response);
@@ -44,6 +46,7 @@ class Dashboard extends React.Component{
                     const result = new Array(response.length);
                     response.map((order, index) => {
                         result[index] = {
+                            "index": index,
                             "id": order.id,
                             "chef": chef.name,
                             "name": order.name,
@@ -66,12 +69,12 @@ class Dashboard extends React.Component{
         let publicItems = []
         console.log(publicItems)
 
+
         if (this.state.items == undefined) {
             return (
                 <div>Fetching data</div>
             )
         }
-
         this.state.items.map((meal) => (
             meal.public 
             ? publicItems.push(meal)
@@ -84,7 +87,7 @@ class Dashboard extends React.Component{
                 <div id='privateItems' className='col'>
                     <h3>Saved Meals</h3>
                     {privateItems.map((meal, i) =>(
-                            <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
+                            <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
                                 <MenuItem props={meal} />
                             </div>
                     ))}
@@ -92,7 +95,7 @@ class Dashboard extends React.Component{
                 <div id='publicMenu' className='col'>
                     <h3>Public Meal</h3>
                     {publicItems.map((meal, i) =>(
-                        <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
+                        <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
                             <MenuItem props={meal} />
                         </div>
                     ))}
