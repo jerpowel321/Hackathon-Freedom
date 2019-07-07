@@ -70,7 +70,9 @@ class Landing extends Component {
               <br></br>
                 <div className="text-center">
                 <button name="button" className="btn btn-md bggreen text-white p-2 hvr-grow-shadow ml-5 mt-2 border-dark" onClick={this.onSubmit} type="submit">
-                  <b><Link className="text-white" to="/chef/dashboard">Sign In</Link></b>
+
+                  <b><Link  className="text-white" to="/chef/dashboard">Sign In</Link></b>
+
                 </button>
                 </div>
                
