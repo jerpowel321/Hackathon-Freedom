@@ -194,6 +194,30 @@ font-family: 'B612', sans-serif;
   max-width: 18rem;
   margin: auto;
 }
+
+
+.foodDescription H2 {
+text-decoration: underline;
+}
+#soup {
+  width: 50%;
+}
+.black {
+  color: #000000;
+}
+#salt {
+  width: 50%;
+}
+.previmg {
+  height: 250px;
+}
+.foodDescription row {
+  margin: 0px;
+}
+.lastImg {
+  width: 99%;
+}
+
 /* ---------------------Jennifer -------------------------*/
 
 
