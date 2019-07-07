@@ -22,7 +22,7 @@ class jobpost extends Component {
 
   submitOrder() {
     const amount = document.getElementById("exampleFormControlSelect1").value;
-    API.buyOrderGetData(2, 14, amount).then(x => {
+    API.buyOrderGetData(2, 15, amount).then(x => {
       console.log(x.data);
       if (window.persist == null) {
         window.persist = {}
