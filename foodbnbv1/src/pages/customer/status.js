@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Nav from "../../components/Nav"
 import { Link, NavLink } from 'react-router-dom';
+import Footer from "../../components/Footer"
 
 
 
@@ -46,32 +47,39 @@ class Status extends Component {
                         </div>
 
 
-                        <form>
+                        {/* <form>
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Default checkbox
                                         </label>
-                                        </input>
+                                </input>
 
+                            </div>
+                        </form> */}
 
-
-  </div>
-
-                            
-                        </form>
-                    </div>
                     </div>
                 </div>
-                )
-            }
-        }
-        
-        export default Status;
-        
-        
-           
+
+          
+            <Footer></Footer>
+   
+
+
+            </div>
+
+
+
+
+        )
+    }
+}
+
+export default Status;
+
+
+
                 //1-hour delivery windows
                  //4:00 - 6:00 PM
                 //$4.99
@@ -79,22 +87,21 @@ class Status extends Component {
                 //$4.99
                  //8:00 - 10:00 PM
                 //$4.99
-        
-        
+
+
                 //Tip:  $5.00 (recommended) Edit
-        
+
                 //Order Summary
                 //Items (1):	$2.99
                 //Delivery Fee:	-
                 //Total before tax & tip:	$2.99
                 //Tip:	$5.00
-        
+
                 //Order total: $7.99
-        
+
                 // Order completed 
                 // Math Floor
-        
-                                        
-        
-                        
-           
+
+
+
+
