@@ -71,7 +71,7 @@ class Dashboard extends React.Component{
                 <div id='privateItems' className='col'>
                     <h3>Saved Meals</h3>
                     {privateItems.map((meal, i) =>(
-                            <div key={i} onClick={(e) => this.toggleStatus(i)}>
+                            <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
                                 <MenuItem props={meal} />
                             </div>
                     ))}
@@ -79,7 +79,7 @@ class Dashboard extends React.Component{
                 <div id='publicMenu' className='col'>
                     <h3>Public Meal</h3>
                     {publicItems.map((meal, i) =>(
-                        <div key={i} onClick={(i) => this.toggleStatus(i)}>
+                        <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
                             <MenuItem props={meal} />
                         </div>
                     ))}
