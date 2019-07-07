@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron"
 import Nav from "../../components/Nav"
+import { Link, NavLink } from 'react-router-dom';
 // import { Col, Row, Container } from "../../components/Grid";
 import Footer from "../../components/Footer"
 import ImageRow from "../../components/ImageRow"
 
 class Search extends Component {
+
   state = {
     results: [],
     search: "",
@@ -128,6 +130,7 @@ class Search extends Component {
 
     )
   }
+
 }
 
 export default Search;

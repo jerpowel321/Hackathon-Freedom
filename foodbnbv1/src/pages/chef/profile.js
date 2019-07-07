@@ -5,21 +5,18 @@ import React from 'react'
 const Profile = () =>
     <div>
         <div id='basic-info'>
-            <h1>props.name</h1>
-            <p>props.email</p>
-            <p>Place Image here</p>
-            <p>props.bio</p>
-            <p>Zip Code: props.zip</p>
+            <h1>Aryan Varshney</h1>
+            <p>aryan@gmail.com</p>
+            <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" alt="Profile Picture"/>
+            <p>I am a home cook who loves making Indian Food</p>
+            <p>Zip Code: 94539</p>
         </div>
         <div id='food-info'>
-            <p>Main Cuisine: props.cuisine</p>
+            <p>Main Cuisine: Indian</p>
             <p>Specialties</p>
             <ul>
-                <li>First Specialty ... </li>
-            </ul>
-            <p>Reviews</p>
-            <ul>
-                <li>Reviews Here</li>
+                <li>Spicy Food</li>
+                <li>Vegetarian Food</li>
             </ul>
         </div>
     </div>

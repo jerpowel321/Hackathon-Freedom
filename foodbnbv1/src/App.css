@@ -152,7 +152,10 @@ hr { display: block; height: 1px;
 .searchfooter ul{
   padding-inline-start: 0px;
 }
-
+.rowOfImages img {
+  height: 150px;
+  margin-left: 20px;
+}
 
 
 
