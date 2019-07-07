@@ -13,6 +13,8 @@ import Status from "./pages/customer/status";
 import SignIn from "./pages/landing";
 import Dashboard from "./pages/chef/dashboard";
 import ForgetPassword from "./pages/forgetpassword";
+// import Singaporian from "./pages/singaporian";
+import Chinese from "./pages/food/Chinese";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route exact path="/forgetpassword" component={ForgetPassword} />
         <Route exact path="/" component={Search} />
         <Route exact path="/customer/status" component={Status} />
+        {/* <Route exact path="/meal/singaporiancuisine" component={Singaporian} /> */}
+        <Route exact path="/Chinese" component={Chinese} />
       </Switch>
     </Router>
   );
