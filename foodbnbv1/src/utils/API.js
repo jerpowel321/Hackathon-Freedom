@@ -59,6 +59,48 @@ export default {
     },
 
     /**
+     * Same as buyOrder, but also gets the data.
+     * e.g.
+     * {
+     *    "customer": {
+     *        "id": 2,
+     *        "name": "Alice",
+     *        "profile_img": null,
+     *        "address": "Example Avenue 10",
+     *        "zipcode": 0,
+     *        "credits": 8931,
+     *        "email": "alice@anycryptbook.com"
+     *    },
+     *    "order": {
+     *        "id": 12,
+     *        "name": "Singaporian Cuisine",
+     *        "description": "Fried Calamari",
+     *        "price_per_meal": 10,
+     *        "total_price": 10,
+     *        "portions": -6,
+     *        "portions_bought": 1
+     *    },
+     *    "chef": {
+     *        "id": 1,
+     *        "name": "Test Person",
+     *        "profile_img": null,
+     *        "zipcode": 123123
+     *    },
+     *    "ordered_date": "2019-07-07T11:03:17.5393042-07:00"
+     * }
+     * @param number customerId
+     * @param number orderId
+     * @param number amount
+     */
+    buyOrderGetData(customerId, orderId, amount=1) {
+      return axios.post(BASEURL + "/buy/", {
+        "customer_id": customerId,
+        "order_id": orderId,
+        "amount": amount
+      });
+    },
+
+    /**
      * returns all the orders a customer has placed.
      */
     getOrdersByCustomer(customerId) {
