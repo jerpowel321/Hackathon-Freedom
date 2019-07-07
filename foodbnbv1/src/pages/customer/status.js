@@ -17,11 +17,7 @@ class Status extends Component {
         return (
 
             <div>
-<<<<<<< HEAD
 
-                <div>
-                    <Nav>
-=======
                 <div>
                     <Nav>
                     </Nav>
@@ -56,100 +52,49 @@ class Status extends Component {
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                     <label class="form-check-label" for="defaultCheck1">
                                         Default checkbox
-  </label>
-</div>
+                                        </label>
+                                        </input>
 
 
 
+  </div>
 
-                            </div>
+                            
                         </form>
                     </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default Status;
-
-
-        //Checkout
-
-        //Delivery Address Edit
-        // 1 UNICORN STREET,
-        //SAN FRANCISCO , CA 94129-2276
-        //Melanie Marsollier
->>>>>>> 53163fdd9b53a7c8f4e24959c6bec9e6ea290cf8
-
-                    </Nav>
-                </div>
-
-<<<<<<< HEAD
-                <div className="text-center">
-                    <h3>Checkout</h3>
-                    <br></br>
-                </div>
-
-
-                    <div className="receipt">
-
-                        <div className="col-sm-6">
-                            <div className="card">
-                                <div className="card-body">
-                                    <div className="float-right">
-                                        <button type="button" className="btn btn-link flex-end">Edit</button>
-                                    </div>
-
-                                    <h5 className="card-title">Delivery Address</h5>
-=======
-        //1-hour delivery windows
-         //4:00 - 6:00 PM
-        //$4.99
-         //6:00 - 8:00 PM
-        //$4.99
-         //8:00 - 10:00 PM
-        //$4.99
-
-
-        //Tip:  $5.00 (recommended) Edit
-
-        //Order Summary
-        //Items (1):	$2.99
-        //Delivery Fee:	-
-        //Total before tax & tip:	$2.99
-        //Tip:	$5.00
-
-        //Order total: $7.99
->>>>>>> 53163fdd9b53a7c8f4e24959c6bec9e6ea290cf8
-
-                                    <p className="card-text">
-                                    1 Unicorn Street
-                                    <br></br>San Francisco, CA, 94129
-                                    <br></br>USA
-                                    </p>
-                        </div>
                     </div>
-                                </div>
-                                </div>
-
-<<<<<<< HEAD
-=======
-        // Order completed 
-        // Math Floor
->>>>>>> 53163fdd9b53a7c8f4e24959c6bec9e6ea290cf8
-
-                                <form>
-                                </form>
-
-
-                            </div>
-                        
-                        )
-                    }
-                }
-                
+                </div>
+                )
+            }
+        }
+        
         export default Status;
-                
-                
+        
+        
+           
+                //1-hour delivery windows
+                 //4:00 - 6:00 PM
+                //$4.99
+                 //6:00 - 8:00 PM
+                //$4.99
+                 //8:00 - 10:00 PM
+                //$4.99
+        
+        
+                //Tip:  $5.00 (recommended) Edit
+        
+                //Order Summary
+                //Items (1):	$2.99
+                //Delivery Fee:	-
+                //Total before tax & tip:	$2.99
+                //Tip:	$5.00
+        
+                //Order total: $7.99
+        
+                // Order completed 
+                // Math Floor
+        
+                                        
+        
+                        
            
