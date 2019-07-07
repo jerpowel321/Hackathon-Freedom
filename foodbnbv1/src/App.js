@@ -9,6 +9,7 @@ import Jobpost from "./pages/chef/jobpost";
 import Profile from "./pages/chef/profile";
 import SignUp from "./pages/chef/signup"
 import Search from "./pages/customer/search";
+import Status from "./pages/customer/status";
 import SignIn from "./pages/landing";
 import Dashboard from "./pages/chef/dashboard";
 import ForgetPassword from "./pages/forgetpassword";
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/forgetpassword" component={ForgetPassword} />
         <Route exact path="/" component={Search} />
+        <Route exact path="/customer/status" component={Status} />
       </Switch>
     </Router>
   );
