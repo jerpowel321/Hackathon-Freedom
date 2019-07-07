@@ -9,6 +9,7 @@ import Orders from "./pages/chef/orders";
 import Profile from "./pages/chef/profile";
 import SignUp from "./pages/chef/signup"
 import Search from "./pages/customer/search";
+import Status from "./pages/customer/status";
 import SignIn from "./pages/landing";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/chef/signup" component={SignUp} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/" component={Search} />
+        <Route exact path="/customer/status" component={Status} />
       </Switch>
     </Router>
   );
