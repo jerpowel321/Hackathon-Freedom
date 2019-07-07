@@ -170,7 +170,7 @@ class Status extends Component {
                                     <br></br>
                                     <br></br>
                                     <br></br>
-                                        <button className="btn btn-outline-success btn-lg text-monospace" type="submit"><span className="spinner-grow spinner-grow-sm"></span><strong>Order</strong></button>
+                                    <button className="btn btn-outline-success btn-lg text-monospace" type="submit"><NavLink className="burp" id="burp" to="/"><span className="spinner-grow spinner-grow-sm"></span><strong>Order</strong></NavLink></button>
                                     </div>
                                 </div>
                             </div>
