@@ -139,8 +139,16 @@ p, label, input {
 .mealImage {
   height: 150px;
 }
-
-
+#footerimg {
+  height:30px;
+}
+hr { display: block; height: 1px;
+  border: 0; border-top: 1px solid #ccc;
+  margin: 1em 0; padding: 0; }
+.searchfooter a {
+  color: white;
+  padding-top:5px;
+}
 
 
 
