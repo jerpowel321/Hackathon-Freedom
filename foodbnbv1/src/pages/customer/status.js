@@ -35,19 +35,42 @@ class Status extends Component {
                                         <p class="card-text">1 Unicorn Street <br></br>
                                             San Francisco, CA, 94129 <br></br>
                                             USA
-                                    </p>
+                                        </p>
+                                        <h5 class="card-title">Payment</h5>
+                                        <form>
+                                            <div className="form-row">
+                                                <div className="col">
+                                                    <input type="text" className="form-control" placeholder="Name on Card"></input>
+                                                </div>
+                                                <div className="col">
+                                                    <input type="text" className="form-control" placeholder="Card Number"></input>
+                                                </div>
+                                            </div>
+                                            <br></br>
+                                            <div className="form-row">
+                                                <div className="col">
+                                                    <input type="text" className="form-control" placeholder="Expiry Date"></input>
+                                                </div>
+                                                <div className="col">
+                                                    <input type="text" className="form-control" placeholder="CVC"></input>
+                                                </div>
+                                            </div>
+                                        </form>
+
                                     </div>
 
                                 </div>
                             </div>
-                            <div className="col-sm-6">
+                            <div className="col-sm-6 float-right">
                                 <div className="card">
                                     <div className="card-body">
                                         <h5>Order Summary</h5>
                                         <br></br>
-                                        <div className="inline-block">
-                                            <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo" />
-                                            <b><a className="navbar-brand"><span className="green">Food</span><span className="orange">Drop</span></a></b>
+                                        <div className="row">
+                                            <div className="mx-auto">
+                                                <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo" />
+                                                <b><a className="navbar-brand"><span className="green">Food</span><span className="orange">Drop</span></a></b>
+                                            </div>
                                         </div>
 
                                         <br></br>
@@ -60,16 +83,16 @@ class Status extends Component {
                                                 <h7>- Name1</h7>
                                             </div>
                                             <div className="col-2">
-                                                <p className="">$ price1</p>
+                                                <p className="">$ ??.??</p>
                                             </div>
                                         </div>
 
                                         <div className="row">
-                                        <div className="col-10">
-                                            <h7>Delivery Fees:</h7>
+                                            <div className="col-10">
+                                                <h7>Delivery Fees:</h7>
                                             </div>
                                             <div className="col-2">
-                                            <p className="float-right">$ 5.00</p>
+                                                <p className="float-right">$ 5.00</p>
                                             </div>
                                         </div>
 
@@ -81,9 +104,9 @@ class Status extends Component {
                                 </div>
 
                             </div>
+
+
                         </div>
-
-
 
                         {/* <div className="inline-block"> */}
 
@@ -91,50 +114,67 @@ class Status extends Component {
 
                         {/* <br></br> */}
 
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 class="card-title">Select Delivery Time</h5>
 
-                        <div className="col-sm-6">
-                            <div className="card">
-                                <div className="card-body">
-                                    <h5 class="card-title">Select Delivery Time</h5>
 
 
-
-                                    <p>We'll drop it off at your door, eat it fresh, be there to pick it up!</p>
-                                    <form>
-                                        <div className="form-group">
-                                            <h6>1-hour delivery windows</h6>
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
-                                                <label className="form-check-label" for="exampleRadios1">
-                                                    11:00 AM to 12:00 PM
+                                        <p>We'll drop it off at your door, eat it fresh, be there to pick it up!</p>
+                                        <form>
+                                            <div className="form-group">
+                                                <h6>1-hour delivery windows</h6>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                                                    <label className="form-check-label" for="exampleRadios1">
+                                                        11:00 AM to 12:00 PM
                                             </label>
-                                            </div>
+                                                </div>
 
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
-                                                <label className="form-check-label" for="exampleRadios1">
-                                                    12:00 PM to 13:00 PM
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                                                    <label className="form-check-label" for="exampleRadios1">
+                                                        12:00 PM to 13:00 PM
                                             </label>
-                                            </div>
+                                                </div>
 
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
-                                                <label className="form-check-label" for="exampleRadios1">
-                                                    13:00 PM to 14:00 PM
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                                                    <label className="form-check-label" for="exampleRadios1">
+                                                        13:00 PM to 14:00 PM
                                             </label>
-                                            </div>
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
-                                                <label className="form-check-label" for="exampleRadios1">
-                                                    14:00 PM to 15:00 PM
+                                                </div>
+                                                <div className="form-check">
+                                                    <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                                                    <label className="form-check-label" for="exampleRadios1">
+                                                        14:00 PM to 15:00 PM
                                             </label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div className="col-sm-6">
+                                <div className="row">
+                                    
+                                    <div className="mx-auto">
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                        <button className="btn btn-outline-success btn-lg text-monospace" type="submit"><span className="spinner-grow spinner-grow-sm"></span><strong>Order</strong></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <Footer></Footer>
