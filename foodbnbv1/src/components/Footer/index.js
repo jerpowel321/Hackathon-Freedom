@@ -7,14 +7,14 @@ const FooterPage = () => {
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <h4 className="title pl-5 p-1">FoodDrop</h4>
-            <img className="pl-5 pb-2" id="footerimg" src="../../images/foodlogo.png" alt="logo"/>
-            <b><p className="text-info pl-5 pb-1">
+            <h3 className="title pl-5 p-1"><span className="green">Food</span><span className="text-white">Drop</span></h3>
+            {/* <img className="pl-5 pb-2" id="footerimg" src="../../images/foodlogo.png" alt="logo"/> */}
+            <b><p className=" pl-5 pb-1 green">
               An intimate food experience.
             </p></b>
           </MDBCol>
           <MDBCol md="3">
-            <h5 className="title">About FoodDrop</h5>
+            <h5 className="title green">About Food<span className="text-white">Drop</span></h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Read our blog</a>
@@ -25,26 +25,18 @@ const FooterPage = () => {
               <li className="list-unstyled">
                 <a href="#!">Make an Account</a>
               </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
+
             </ul>
             
           </MDBCol>
           <MDBCol md="3">
-            <h5 className="title">Get Help</h5>
+            <h5 className="title green">Get Help</h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Read FAQs</a>
               </li>
               <li className="list-unstyled">
                 <a href="#!">View all cities</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
               </li>
             </ul>
             
@@ -57,23 +49,17 @@ const FooterPage = () => {
           </MDBCol>
           <MDBCol md="6">
             <h5 className="title"></h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Privacy Policy</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Terms of Use</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Pricing</a>
-              </li>
-            </ul>
-            
+           
+            <div>
+            <a className="pr-4"href="#!">Privacy Policy</a>
+            <a className="pr-4" href="#!">Terms of Use</a>
+            <a className="pr-4" href="#!">Pricing</a>
+            </div>
           </MDBCol>
         </MDBRow>
 
       </MDBContainer>
-      <div className="footer-copyright text-white text-center py-3">
+      <div className="footer-copyright text-white text-center py-3 pt-5">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright: FoodDrop 
         </MDBContainer>
