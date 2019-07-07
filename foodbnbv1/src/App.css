@@ -65,20 +65,18 @@
 }
 
 .landing {
-  background-Image: url("https://images.unsplash.com/photo-1472393365320-db77a5abbecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80");
+  background-color: #F6F8FF;
   background-size: cover;
   background-position: center center;
-  min-height: 95vh;
-  margin: 20px;
+  min-height: 45vh;
+  position: relative;
 }
 
 
 .signInCard {
   background-color: rgba(253, 253, 253, 0.281);
-  min-width: 50%;
   border-radius: 3px;
-  padding: 20px;
-  margin-top: 40px;
+
 }
 p, label, input {
   color: 	#3E9920
@@ -154,10 +152,33 @@ hr { display: block; height: 1px;
 }
 .rowOfImages img {
   height: 150px;
-  margin-left: 20px;
+  margin-right: 40px;
 }
 
+p, h1, h2, h3, h4, h5, h6, a, ul, label, input, span, button {
+font-family: 'B612', sans-serif;
+}
+.flexContainer {
+  display: flex;
+  align-self: flex-start;
+}
+.signInArea {
+  position: absolute;
+  top: 180px;
+  right: 100px;
+  width: 400px;
+  border: 3px solid #73AD21;
+  margin-bottom: 100px;
+}
+.signInArea label{
+  padding-left: 0;
+  margin-left: 10px;
 
+}
+.signInArea a {
+  padding-left: 0;
+  margin-left: 10px;
+}
 
 /* ---------------------Jennifer -------------------------*/
 

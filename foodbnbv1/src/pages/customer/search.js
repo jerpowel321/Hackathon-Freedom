@@ -104,7 +104,7 @@ class Search extends Component {
             })}
           </div>
 
-          <div className="mt-5" id="availableMeals" className=" pt-5 pb-5">
+          <div className="mt-5" id="availableMeals" className=" pt-3 pb-5">
             <h1 className="orange">Available Meals Near San Mateo</h1>
             <div className="row">
               {this.state.availableMeals.map(meal => {
@@ -114,7 +114,7 @@ class Search extends Component {
                   <div key={meal.id} className="col-sm-3">
                     <div className="card mb-3">
                         <img className="mealImage" src={meal.image} alt="mealImage" onClick={() => imageClick(meal)} />
-                        <h5 className="card-title text-center green">{meal.name}</h5>
+                        <h5 className="card-title pt-2 text-center green">{meal.name}</h5>
                     </div>
                   </div>
                 )
