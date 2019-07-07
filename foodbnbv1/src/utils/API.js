@@ -24,4 +24,10 @@ export default {
     },
 
     
+    getChefById(id) {
+      return axios.get(BASEURL + "/chefs/" + id);
+    },
+    getCustomerById(id) {
+      return axios.get(BASEURL + "/customers/" + id);
+    },
 };

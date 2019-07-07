@@ -1,4 +1,5 @@
 import React from 'react'
+import API from "../../utils/API";
 
 const MenuItem = ({props}) =>
     <div className="card text-white bg-primary mb-3 w-50">
@@ -15,33 +16,10 @@ class Dashboard extends React.Component{
         super(props)
         this.toggleStatus = this.toggleStatus.bind(this)
     }
+    
 
     state = {
         'items':[
-            {
-                'id':0,
-                'chef':'Aryan',
-                'name':'Chicken Biryani',
-                'cuisine': 'Indian',
-                'description': 'Spicy Rice with tender chicken',
-                'public':false
-            },
-            {
-                'id':1,
-                'chef':'Aryan',
-                'name':'Chicken Noodle Soup',
-                'cuisine': 'Asian',
-                'description': 'Udon Noodles served in chicken broth and an assortment of vegetables',
-                'public': false
-            },
-            {
-                'id':2,
-                'chef':'Aryan',
-                'name':'Peanut Butter Sandwich',
-                'cuisine': 'American',
-                'description': 'Peanut Butter and Jam spreads on toasted whole wheat bread',
-                'public': false
-            }
         ]
     }
 
@@ -56,15 +34,50 @@ class Dashboard extends React.Component{
         })
     }
 
+    componentWillMount() {
+        API.getChefById(1).then(done => {
+            const chef = JSON.parse(done.request.response);
+
+            API.getAvailableMeals().then(done => {
+                if (done.status == 200) {
+                    const response = JSON.parse(done.request.response);
+                    const result = new Array(response.length);
+                    response.map((order, index) => {
+                        result[index] = {
+                            "id": order.id,
+                            "chef": chef.name,
+                            "name": order.name,
+                            "cuisine": order.tags,
+                            "description": order.description,
+                            "public": order.status != "private"
+                    }});
+
+                    this.setState({ "items": result });
+                }
+                else {
+                    console.error("Failed received " + done.status)
+                }
+            })
+        });
+    }
+
     render() {
         let privateItems = []
         let publicItems = []
         console.log(publicItems)
+
+        if (this.state.items == undefined) {
+            return (
+                <div>Fetching data</div>
+            )
+        }
+
         this.state.items.map((meal) => (
             meal.public 
             ? publicItems.push(meal)
             : privateItems.push(meal) 
         ))
+
 
         return (
             <div className='row'>
