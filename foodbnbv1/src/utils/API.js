@@ -27,7 +27,49 @@ export default {
     getChefById(id) {
       return axios.get(BASEURL + "/chefs/" + id);
     },
+
     getCustomerById(id) {
       return axios.get(BASEURL + "/customers/" + id);
     },
+
+    /**
+     * On success (if the customer can afford it, and there is still portions left)
+     * will return a customer buy order
+     * {
+     *  id: number,
+     *  customer_id: number,
+     *  order_id: number,
+     *  amount: number,
+     *  ordered_by: date-time (probably a string)
+     * }
+     * 
+     * @param number customerId 
+     * @param number orderId 
+     * @param number amount
+     */
+    buyOrder(customerId, orderId, amount=1) {
+      return axios.post(BASEURL + "/buy/", {
+        "customer_id": customerId,
+        "order_id": orderId,
+        "amount": amount
+      });
+    },
+
+    /**
+     * returns all the orders a customer has placed.
+     */
+    getOrdersByCustomer(customerId) {
+      return axios.get(BASEURL + "/buy?customer=" + customerId);
+    },
+
+    /**
+     * returns all the customers that have bought a portion of the order.
+     */
+    getCustomersByOrder(orderId) {
+      return axios.get(BASEURL + "/buy?customer=" + orderId);
+    },
+
+    getReviewsForChef(chefID) {
+      return axios.get(BASEURL + "/reviews?chef=" + chefID);
+  },
 };
