@@ -46,6 +46,7 @@ class Dashboard extends React.Component{
                     const result = new Array(response.length);
                     response.map((order, index) => {
                         result[index] = {
+                            "index": index,
                             "id": order.id,
                             "chef": chef.name,
                             "name": order.name,
@@ -86,7 +87,7 @@ class Dashboard extends React.Component{
                 <div id='privateItems' className='col'>
                     <h3>Saved Meals</h3>
                     {privateItems.map((meal, i) =>(
-                            <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
+                            <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
                                 <MenuItem props={meal} />
                             </div>
                     ))}
@@ -94,7 +95,7 @@ class Dashboard extends React.Component{
                 <div id='publicMenu' className='col'>
                     <h3>Public Meal</h3>
                     {publicItems.map((meal, i) =>(
-                        <div key={i} onClick={(e) => this.toggleStatus(meal['id'])}>
+                        <div key={i} onClick={(e) => this.toggleStatus(meal['index'])}>
                             <MenuItem props={meal} />
                         </div>
                     ))}
