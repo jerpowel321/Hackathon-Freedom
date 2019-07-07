@@ -7,5 +7,21 @@ export default {
     saveJob(Job) {
         return axios.post(BASEURL + "/orders", Job)
     },
+    getAvailableMeals() {
+      return axios.get(BASEURL + "/orders?status=available")
+    },
+    getInProgressMeals() {
+      return axios.get(BASEURL + "/orders?status=inprogress")
+    },
+    getInDeliveryMeals() {
+      return axios.get(BASEURL + "/orders?status=indelivery")
+    },
+    getCompletedOrders() {
+      return axios.get(BASEURL + "/orders?status=completedOrders")
+    },
+    getPrivateOrders() {
+      return axios.get(BASEURL + "/orders?status=private")
+    },
+
     
 };
