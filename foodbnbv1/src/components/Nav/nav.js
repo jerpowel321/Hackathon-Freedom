@@ -7,7 +7,7 @@ function Nav({ children }) {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo"/>
-                <a className="navbar-brand">Food BnB</a>
+                <b><a className="navbar-brand"><span className="green">Food</span><span className="orange">Drop</span></a></b>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
