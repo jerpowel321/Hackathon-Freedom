@@ -3,7 +3,7 @@ import React from "react";
 const ImageRow = () => {
   return (
     <div className="container">
-    <div className="rowOfImages flexContainer">
+    <div className="rowOfImages mt-5 flexContainer">
       <hr></hr>
       <img src="../../images/C1.png" alt="Food Image"></img>
       <img src="../../images/C2.png" alt="Food Image"></img>

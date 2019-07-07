@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import { Link, NavLink } from 'react-router-dom';
-import Nav from "../components/Nav"
+import Nav from "../components/Nav";
 
-// const INITIAL_STATE = {
-//   email: '',
-//   password: '',
-//   isAdmin: '',
-//   error: null,
-// };
 
-// onChange = event => {
-//   this.setState({ [event.target.name]: event.target.value });
-// };
+
+
 
 class Landing extends Component {
 
@@ -23,19 +16,19 @@ class Landing extends Component {
         <Nav/>
       <div className="landing">
         <div className="container pt-5">
-        <h1 className="orange pt-5">It's not just <span className="green">Food.</span> </h1>
-        <h1 className="green pl-5">It's an <span className="orange">experience.</span></h1>
+        <h1 className="pt-5">It's not just <span className="green">Food.</span> </h1>
+        <h1 className=" pl-5">It's an <span className="orange">experience.</span></h1>
         </div>
       </div>
-
+      <div className="signInBackground"></div>
       <div className="signInArea">
         <div className="d-flex justify-content-center">
           <div className="div  signInCard">
-            <h1 className=" text-center green pt-4">Looking for home cooked meals?</h1>
+            <h3 className=" text-center  pt-4">Looking for home cooked meals?</h3>
             <div className="text-center">
               <button className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark"><NavLink className="" to="/search"><b className="text-white">Yes! Take me There.</b></NavLink></button>
             </div>
-            <h1 className="text-center mr-5 green pt-5">Chef Sign In</h1>
+            <h3 className="text-center mr-5  pt-5">Chef Sign In</h3>
             <form className="mt-3" >
               <div className="row">
                 <div className="col-sm-5">
@@ -69,7 +62,7 @@ class Landing extends Component {
               </div>
               <br></br>
                 <div className="text-center">
-                <button name="button" className="btn btn-md bggreen text-white p-2 hvr-grow-shadow ml-5 mt-2 border-dark" onClick={this.onSubmit} type="submit">
+                <button name="button" className="btn btn-md bggreen text-white p-2 hvr-grow-shadow mt-2 border-dark" onClick={this.onSubmit} type="submit">
 
                   <b><Link  className="text-white" to="/chef/dashboard">Sign In</Link></b>
 

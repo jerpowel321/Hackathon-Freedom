@@ -13,7 +13,8 @@ class Search extends Component {
     results: [],
     search: "",
     availableMeals: [],
-    selectedMeal: []
+    selectedMeal: [],
+    zipcode: ""
   }
 
   componentDidMount() {
@@ -36,7 +37,7 @@ class Search extends Component {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
         }
-        this.setState({ results: res.data.items });
+        this.setState({ results: res.data });
       })
       .catch(err => this.setState({ error: err.message }));
   };
@@ -88,17 +89,16 @@ class Search extends Component {
           <div className="pb-2 mb-2" id="cooks" className="container px-5">
             {this.state.results.map(cook => {
               keyCount++;
-              return (<div value={cook} key={keyCount}>
-                <hr></hr>
-                <h2 className="text-center text-info mt-2">{cook.volumeInfo.title}</h2>
-                <p className="text-center">Author: {cook.volumeInfo.authors ? cook.volumeInfo.authors[0] : "No author listed"}</p>
-                <img className="rounded mx-auto d-block" src={cook.volumeInfo.imageLinks ? cook.volumeInfo.imageLinks.smallThumbnail : "No Image Listed"}></img>
-                <p className="pt-4">Description: {cook.volumeInfo.description}</p>
+              return (<div className="col-sm-6 "value={cook} key={keyCount}>
+                {/* <hr></hr> */}
+                <div className="card">
+                <h2 className="text-center text-info mt-2">{cook.name}</h2>
+                <img className="rounded mx-auto d-block" src={cook.profile_img ? cook.profile_img : "No Image Listed"}></img>
+                <p className="text-center">Bio: {cook.bio ? cook.bio : "No author listed"}</p>
+                <p className="pt-4 text-center">Specialties: {cook.specialties}</p>
                 <div className="buttonContainer text-center">
-                  <a href={cook.volumeInfo.previewLink} target="_blank">
-                    <button className="btn btn-info rounded mx-2 mb-4 cookButton">cook preview</button>
-                  </a>
-                  <button className="btn btn-info rounded mx-2 mb-4 cookButton" onClick={() => this.handleSavecook(keyCount)}>Save cook</button>
+                  {/* <button className="btn btn-info rounded mx-2 mb-4 cookButton" onClick={() => this.handleSavecook(keyCount)}>Save cook</button> */}
+                </div>
                 </div>
               </div>)
             })}
@@ -111,9 +111,10 @@ class Search extends Component {
                 
                 if(meal.image && meal.name){
                 return (
-                  <div key={meal.id} className="col-sm-3">
-                    <div className="card mb-3">
-                        <img className="mealImage" src={meal.image} alt="mealImage" onClick={() => imageClick(meal)} />
+               
+                  <div key={meal.id} className=".col-8 col-sm-8 col-md-4 col-lg-3 ">
+                    <div className="card mealCard mb-3">
+                    <Link to={meal.name}><img className="mealImage" src={meal.image} alt="mealImage"/></Link>
                         <h5 className="card-title pt-2 text-center green">{meal.name}</h5>
                     </div>
                   </div>

@@ -68,14 +68,14 @@
   background-color: #F6F8FF;
   background-size: cover;
   background-position: center center;
-  min-height: 45vh;
+  min-height: 40vh;
   position: relative;
 }
 
 
 .signInCard {
   background-color: rgba(253, 253, 253, 0.281);
-  border-radius: 3px;
+  border-radius: 10px;
 
 }
 p, label, input {
@@ -136,6 +136,7 @@ p, label, input {
 }
 .mealImage {
   height: 150px;
+  width: 100%;
 }
 #footerimg {
   height:50px;
@@ -167,7 +168,7 @@ font-family: 'B612', sans-serif;
   top: 180px;
   right: 100px;
   width: 400px;
-  border: 3px solid #73AD21;
+  background-color: rgba(230, 232, 238);
   margin-bottom: 100px;
 }
 .signInArea label{
@@ -178,8 +179,21 @@ font-family: 'B612', sans-serif;
 .signInArea a {
   padding-left: 0;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
+.signInBackground {
+  background-image: url("https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 50px;
+}
+
+.mealCard {
+  max-width: 18rem;
+  margin: auto;
+}
 /* ---------------------Jennifer -------------------------*/
 
 

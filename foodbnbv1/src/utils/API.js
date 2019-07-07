@@ -22,6 +22,9 @@ export default {
     getPrivateOrders() {
       return axios.get(BASEURL + "/orders?status=private")
     },
+    searchcooks() {
+      return axios.get(BASEURL + "/chefs")
+    },
 
     
     getChefById(id) {
