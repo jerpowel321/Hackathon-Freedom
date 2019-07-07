@@ -26,7 +26,7 @@ class Landing extends Component {
           <div className="div  signInCard">
             <h3 className=" text-center  pt-4">Looking for home cooked meals?</h3>
             <div className="text-center">
-              <button className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark"><NavLink className="" to="/search"><b className="text-white">Yes! Take me There.</b></NavLink></button>
+              <button className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark"><NavLink className="" to="/"><b className="text-white">Yes! Take me There.</b></NavLink></button>
             </div>
             <h3 className="text-center mr-5  pt-5">Chef Sign In</h3>
             <form className="mt-3" >
