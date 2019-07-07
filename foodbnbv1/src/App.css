@@ -126,7 +126,16 @@ p, label, input {
 }
 
 /* ---------------------Jennifer -------------------------*/
-
+.dropZone {
+  background: rgb(242, 242, 242);
+  border:2px dashed rgb(205, 205, 205);
+}
+.FileUpload img {
+  width: 50%
+  }
+#logo {
+  height:50px;
+}
 
 
 

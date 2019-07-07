@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { Link, NavLink } from 'react-router-dom';
 
 
-const INITIAL_STATE = {
-  email: '',
-  password: '',
-  isAdmin: '',
-  error: null,
-};
+// const INITIAL_STATE = {
+//   email: '',
+//   password: '',
+//   isAdmin: '',
+//   error: null,
+// };
 
 // onChange = event => {
 //   this.setState({ [event.target.name]: event.target.value });
@@ -69,8 +69,8 @@ class Landing extends Component {
                
                 <div>
                   <br></br>
-                  <b><p>Forgot Password</p></b>
-                  <b><p><Link to="/chef/signup">Dont have an account? Sign Up!</Link></p></b>
+                  <b><p><Link to="/forgetpassword">Forget Password</Link></p></b>
+                  <b><p><Link to="/chef/profile">Dont have an account? Sign Up!</Link></p></b>
               </div>
               {/* {error && <p className="text-white darkbackground p-1 mt-3"><b>{error.message}</b></p>} */}
             </form>
@@ -87,5 +87,3 @@ class Landing extends Component {
 
 export default Landing;
 
-{/* <Link to="/chef/profile">I am a chef!</Link> 
-<Link to="/search">I am looking for home cooked meals!</Link> */}

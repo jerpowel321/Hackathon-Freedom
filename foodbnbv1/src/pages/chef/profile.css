@@ -4,7 +4,8 @@
 }
 
 div{
-    align-items: center
+    align-items: center;
+    color: red;
 }
 
 #email-field{
