@@ -3,18 +3,18 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
   return (
-    <MDBFooter className="font-small pt-4 mt-4 bg-dark searchfooter">
+    <MDBFooter className="font-small pt-5 mt-4 bg-dark searchfooter">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
-            <h3 className="title pl-5 p-1"><span className="green">Food</span><span className="text-white">Drop</span></h3>
+            <h3 className="title pl-5 p-1"><span className="green">Food</span><span className="orange">Drop</span></h3>
             {/* <img className="pl-5 pb-2" id="footerimg" src="../../images/foodlogo.png" alt="logo"/> */}
             <b><p className=" pl-5 pb-1 green">
               An intimate food experience.
             </p></b>
           </MDBCol>
           <MDBCol md="3">
-            <h5 className="title green">About Food<span className="text-white">Drop</span></h5>
+            <h5 className="title green">About Food<span className="orange">Drop</span></h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Read our blog</a>

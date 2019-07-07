@@ -5,6 +5,7 @@ import Nav from "../../components/Nav"
 import { Link, NavLink } from 'react-router-dom';
 // import { Col, Row, Container } from "../../components/Grid";
 import Footer from "../../components/Footer"
+import ImageRow from "../../components/ImageRow"
 
 class Search extends Component {
 
@@ -104,7 +105,7 @@ class Search extends Component {
           </div>
 
           <div className="mt-5" id="availableMeals" className=" pt-5 pb-5">
-            <h1>Available Meals Near San Mateo</h1>
+            <h1 className="orange">Available Meals Near San Mateo</h1>
             <div className="row">
               {this.state.availableMeals.map(meal => {
                 
@@ -122,7 +123,14 @@ class Search extends Component {
             </div>
           </div>
 
+
+
+          <div className="text-center">
+              <button className="btn btn-md bggreen p-2 hvr-grow-shadow p-2 border-dark"><NavLink className="" to="/customer/status"><b className="text-white">GET ME TO RECEIPT</b></NavLink></button>
+            </div>
+
         </div>
+            <ImageRow/>
             <Footer/>
       </div>
 
