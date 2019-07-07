@@ -22,8 +22,10 @@ class Status extends Component {
                 </div>
                 <div className="container">
                     <div className="receipt">
+
+
                         <div className="row">
-                            <div className="col-sm-6">
+               <div className="col-sm-6">
                                 <div className="card">
                                     <div className="card-body">
                                         <div className="inline-block">
@@ -35,6 +37,7 @@ class Status extends Component {
                                             USA
                                     </p>
                                     </div>
+
                                 </div>
                             </div>
                             <div className="col-sm-6">
@@ -45,16 +48,40 @@ class Status extends Component {
                                         <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo" />
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
+
+
+
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <div className="inline-block">
+                                            <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo" />
+                                        </div>
+
+                                        <p>Order Summary</p>
+                                        <p>Items (1):</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <br></br>
+
+
+                        {/* <br></br> */}
+
+
                         <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
                                     <h5 class="card-title">Select Delivery Time</h5>
+
+
+
                                     <p>We'll drop it off at your door, eat it fresh, be there to pick it up!</p>
-                                    <form>
+            <form>
                                         <div className="form-group">
                                             <h6>1-hour delivery windows</h6>
                                             <div className="form-check">
@@ -63,19 +90,21 @@ class Status extends Component {
                                                     11:00 AM to 12:00 PM
                                             </label>
                                             </div>
+
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
                                                 <label className="form-check-label" for="exampleRadios1">
                                                     12:00 PM to 13:00 PM
                                             </label>
                                             </div>
+
                                             <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
                                                 <label className="form-check-label" for="exampleRadios1">
                                                     13:00 PM to 14:00 PM
                                             </label>
                                             </div>
-                                            <div className="form-check">
+                          <div className="form-check">
                                                 <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
                                                 <label className="form-check-label" for="exampleRadios1">
                                                     14:00 PM to 15:00 PM
@@ -86,6 +115,7 @@ class Status extends Component {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <Footer></Footer>
