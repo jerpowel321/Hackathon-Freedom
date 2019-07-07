@@ -95,14 +95,15 @@ class Search extends Component {
                        </button>
             </div>
           </div>
-          <div className="pb-2 mb-2" id="cooks" className="container px-5">
+          <div className="row">
+          <div className="pb-2 mb-2 " id="cooks" className="container flexContainer">
             {this.state.results.map(cook => {
               keyCount++;
-              return (<div className="col-sm-6 mx-auto"value={cook} key={keyCount}>
+              return (<div className="col-sm-5 mx-auto "value={cook} key={keyCount}>
                 {/* <hr></hr> */}
                 <div className="card">
                 <h2 className="text-center text-info mt-2">{cook.name}</h2>
-                <img className="rounded mx-auto d-block img-thumbnail" src={cook.profile_img ? cook.profile_img : "No Image Listed"}></img>
+                <img className="cookimg" className="rounded mx-auto d-block img-thumbnail" src={cook.profile_img ? cook.profile_img : "No Image Listed"}></img>
                 <br></br>
                 <p className="text-center">Bio: {cook.bio ? cook.bio : "No author listed"}</p>
                 <p className="pt-4 text-center">Specialties: {cook.specialties}</p>
@@ -110,8 +111,11 @@ class Search extends Component {
                   {/* <button className="btn btn-info rounded mx-2 mb-4 cookButton" onClick={() => this.handleSavecook(keyCount)}>Save cook</button> */}
                 </div>
                 </div>
+                
               </div>)
+
             })}
+            </div>
           </div>
 
           <div className="mt-5" id="availableMeals" className=" pt-3 pb-5">

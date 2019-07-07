@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 
 
@@ -14,6 +13,9 @@ const Profile = () =>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
+          <li class="nav-item active">
+                <a class="nav-link" href="/chef/profile">Account<span class="sr-only">(current)</span></a>
+              </li>
             <li className="nav-item">
               <a className="nav-link pr-2" href="/chef/dashboard">Dashboard</a>
             </li>

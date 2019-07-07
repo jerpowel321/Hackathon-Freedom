@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import HandleImageUploads from "../../components/DropZone";
 // import { Link, NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router'
-import { Accordion, Card, Button } from 'react-bootstrap';
 import Stars from "../../components/Stars";
-import { Link, NavLink } from 'react-router-dom';
 import Footer from "../../components/Footer"
-import { renderComponent } from "recompose";
 
 class jobpost extends Component {
   state = {
