@@ -3,6 +3,7 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
 
+
 export default class ImageUpload extends React.Component {
 	constructor(props) {
 		super(props);
@@ -12,7 +13,7 @@ export default class ImageUpload extends React.Component {
 			uploadedFileUrls: []
 		};
 	}
-
+  
 	onImageDrop(files) {
 		this.setState({
 			uploadedFile: files[0]
@@ -38,7 +39,8 @@ export default class ImageUpload extends React.Component {
 					uploadedFileCloudinaryUrl: response.body.secure_url,
 				});
 				this.state.uploadedFileUrls.push(response.body.secure_url)
-				this.props.setUserImages && this.props.setUserImages(this.state.uploadedFileUrls);
+        this.props.setUserImages && this.props.setUserImages(this.state.uploadedFileUrls);
+        window.imageURL = this.state.uploadedFileCloudinaryUrl
 				console.log("This is the file cloudinaryUrl")
 				console.log(this.state.uploadedFileCloudinaryUrl)
 				console.log("This should have all the file URLs stored")
