@@ -87,7 +87,29 @@ class Dashboard extends React.Component{
 
         return (
             <div>
-                <Nav/>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <img className="ml-3 mr-2" id="logo" src="../images/foodlogo.png" alt="logo"/>
+                            <b><a className="navbar-brand"><span className="green">Food</span><span className="orange">Drop</span></a></b>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/chef/jobpost">Post a Meal<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/chef/orders">My Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/chef/profile">Account</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
                 <div className='text-center'>
                     <h1 className='text-success mb-5'>Chef Dashboard</h1>
                     <div className='row mt-5'>
