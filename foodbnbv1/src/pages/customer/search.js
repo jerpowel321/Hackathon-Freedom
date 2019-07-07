@@ -102,7 +102,8 @@ class Search extends Component {
                 {/* <hr></hr> */}
                 <div className="card">
                 <h2 className="text-center text-info mt-2">{cook.name}</h2>
-                <img className="rounded mx-auto d-block" src={cook.profile_img ? cook.profile_img : "No Image Listed"}></img>
+                <img className="rounded mx-auto d-block img-thumbnail" src={cook.profile_img ? cook.profile_img : "No Image Listed"}></img>
+                <br></br>
                 <p className="text-center">Bio: {cook.bio ? cook.bio : "No author listed"}</p>
                 <p className="pt-4 text-center">Specialties: {cook.specialties}</p>
                 <div className="buttonContainer text-center">
