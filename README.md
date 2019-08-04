@@ -45,6 +45,6 @@ Chef Profile Page
    * react-star-rating-component
 
 ## Authors
-Jennifer Powell 
-Melanie Marsollier
-Aryan Varshney
+- Jennifer Powell 
+- Melanie Marsollier
+- Aryan Varshney
