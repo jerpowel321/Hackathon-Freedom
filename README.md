@@ -46,3 +46,5 @@ Chef Profile Page
 
 ## Authors
 Jennifer Powell 
+Melanie Marsollier
+Aryan Varshney
